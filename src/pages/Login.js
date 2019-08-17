@@ -6,6 +6,7 @@ export default function Login({ navigation }) {
     const [user, setUser] = useState('');
         
     function handleLogin() {
+        console.log(user);
         navigation.navigate('Main');
     }
 
