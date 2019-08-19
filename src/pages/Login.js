@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import { KeyboardAvoidingView, Platform, StyleSheet, Image, TextInput, TouchableOpacity, Text } from 'react-native';
 import logo from '../assets/logo.png';
+import api from '../services/api';
+
 
 export default function Login({ navigation }) {
     const [user, setUser] = useState('');
         
-    function handleLogin() {
-        console.log(user);
-        navigation.navigate('Main');
+    async function handleLogin() {
+        const response = await api.post('/devs', { username: user });
+
+        const { _id } = response.data;
+
+        console.log( _id );
+        
+        navigation.navigate('Main', { _id });
     }
 
     return (

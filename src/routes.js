@@ -1,7 +1,7 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import Login from './pages/Login';
-import Main from './pages/Main'
+import Main from './pages/Main';
 
 export default createAppContainer(
     createSwitchNavigator({
@@ -10,4 +10,5 @@ export default createAppContainer(
     })
 )
 
-//Opção pelo createDrawerNavigator
+//Opção pelo createDrawerNavigator menu lateral
+//Opção pelo createStackNavigator opção de 
