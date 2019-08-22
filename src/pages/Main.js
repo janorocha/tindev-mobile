@@ -8,7 +8,7 @@ import logo from '../assets/logo.png';
 import dislike from '../assets/dislike.png';
 import like from '../assets/like.png';
 
-export default function Main( {navigation} ) {
+export default function Main( { navigation } ) {
     const id = navigation.getParam('user');
     const [users, setUsers] = useState([]);
 
@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         bottom: 0,
+        backgroundColor:'#f5f5f5',
     },
     avatar: {
         flex: 1,
